@@ -1,7 +1,7 @@
 <?php
 	
 	namespace App\Http\Controllers;
-	
+	use DB;
 	use App\Model\Book;
 	use App\Model\Categori;
 	use App\Model\Oder;
@@ -13,33 +13,26 @@
 		
 		public function getAllTableBook()
 		{
-			$book = new Book();
-			$table = "books";
-			$books = $book->getAll($table);
+			$books = Book::all();
 			return view('book', ['books' => $books]);
 		}
 		
 		public function getAllTableStudent()
 		{
-			$student = new Student();
-			$table = "students";
-			$students = $student->getAll($table);
+			$students = Student::all();
 			return view('student', ['students' => $students]);
 		}
 		
 		public function getAllTableCategori()
 		{
-			$category = new Categori();
-			$table = "categories";
-			$categories = $category->getAll($table);
+			$categories = Categori::all();
 			return view('category', ['categories' => $categories]);
 		}
 		
 		public function getAllTableOder()
 		{
-			$oder = new Oder();
-			$table = "borrows_oder";
-			$oders = $oder->getAll($table);
+			$oders = Oder::all();
 			return view('oder', ['oders' => $oders]);
 		}
+		
 	}

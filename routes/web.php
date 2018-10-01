@@ -11,21 +11,9 @@
 	|
 	*/
 	
-	$page = isset($_REQUEST['page']) ? $_REQUEST['page'] : NULL;
-	switch ($page) {
-		case 'books':
-			Route::get('/library', 'LibraryController@getAllTableBook');
-			break;
-		case 'student':
-			Route::get('/library', 'LibraryController@getAllTableStudent');
-			break;
-		case 'Oder':
-			Route::get('/library', 'LibraryController@getAllTableOder');
-			break;
-		case 'category':
-			Route::get('/library', 'LibraryController@getAllTableCategori');
-			break;
-		default:
-			Route::get('/library', 'LibraryController@getAllTableBook');
-			break;
-	}
+	Route::get('/book', 'LibraryController@getAllTableBook');
+Route::get('/student', 'LibraryController@getAllTableStudent');
+Route::get('/oder', 'LibraryController@getAllTableOder');
+Route::get('/category', 'LibraryController@getAllTableCategori');
+Route::get('/', 'LibraryController@getAllTableBook');
+

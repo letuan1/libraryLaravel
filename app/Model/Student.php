@@ -5,7 +5,9 @@
 	use DB;
 	use Illuminate\Database\Eloquent\Model;
 	
-	class Student extends Library
+	class Student extends Model
 	{
-	
+		protected $table = 'students';
+		
+		
 	}

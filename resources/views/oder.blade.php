@@ -37,16 +37,16 @@
 <body>
 <div id="wrapper">
     <nav class="top-right open">
-        <a class="disc l1" href="/library?page=category">
+        <a class="disc l1" href="{{ url('/book') }}">
             <div>Categori</div>
         </a>
-        <a class="disc l2" href="/library?page=Oder">
+        <a class="disc l2" href="{{ url('/student') }}">
             <div>Oder</div>
         </a>
-        <a class="disc l3" href="/library?page=student">
+        <a class="disc l3" href="{{ url('/oder') }}">
             <div>Student</div>
         </a>
-        <a class="disc l4" href="/library?page=books">
+        <a class="disc l4" href="{{ url('/category') }}">
             <div>Book</div>
         </a>
         <a class="disc l5 toggle">
